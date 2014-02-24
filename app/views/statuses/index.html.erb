@@ -2,15 +2,22 @@
 
     <% @statuses.each do |status| %>
       <div class="status">
-        <% if !status.user.nil? %>
-          <strong><%= status.user.full_name %></strong>
-        <% end %>
-        <p><%= status.content %></p>
-        <span class="links">
-          <%= link_to 'Show', status %>
-          <%= link_to 'Edit', edit_status_path(status) %>
-          <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </span>
+        <div class="row">
+          <div class="col-xs-2">
+              <%= image_tag status.user.gravatar_url %>
+          </div>
+          <div class="col-xs-7"
+            <% if !status.user.nil? %>
+              <strong><%= status.user.full_name %></strong>
+            <% end %>
+            <p><%= status.content %></p>
+            <span class="links">
+              <%= link_to 'Show', status %>
+              <%= link_to 'Edit', edit_status_path(status) %>
+              <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </span>
+          </div>
+        </div>
       </div>
       <hr />
     <% end %>

@@ -2,7 +2,9 @@
 
     <% @statuses.each do |status| %>
       <div class="status">
-        <strong><%= status.user.full_name %></strong>
+        <% if !status.user.nil? %>
+          <strong><%= status.user.full_name %></strong>
+        <% end %>
         <p><%= status.content %></p>
         <span class="links">
           <%= link_to 'Show', status %>

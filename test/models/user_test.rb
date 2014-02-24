@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
+
   test "a user should enter a first name" do
   	user = User.new
   	assert !user.save
@@ -14,7 +15,7 @@ class UserTest < ActiveSupport::TestCase
   	assert !user.errors[:profile_name].empty?
   end
 
-  test "a user should have a profile name without spaces" do
+  test "a user should not have a profile name without spaces" do
   	user = User.new
   	user.profile_name = "My profile with spaces"
 

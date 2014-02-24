@@ -1,10 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @status.user.full_name %>
-</p>
-
+<% if !@status.user.nil? %>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @status.user.full_name %>
+	</p>
+<% end %>
 <p>
   <strong>Content:</strong>
   <%= @status.content %>

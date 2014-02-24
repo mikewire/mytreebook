@@ -4,3 +4,10 @@ michiel:
   email: "michiel.waaijer@gmail.com"
   profile_name: "mikewire"
   encrypted_password: "password"
+
+jim:
+  first_name: "Jim"
+  last_name: "Hoskins"
+  email: "jim@gmail.com"
+  profile_name: "jimbo"
+  encrypted_password: "him"

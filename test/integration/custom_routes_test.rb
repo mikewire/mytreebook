@@ -17,4 +17,10 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
   	assert_response :success
   end
 
+  test "that a profile page works" do
+    get '/' + users(:michiel).profile_name
+    assert_response :success
+  end
+
+
 end

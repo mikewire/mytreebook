@@ -1,0 +1,18 @@
+<h1>Listing statuses</h1>
+
+    <% @statuses.each do |status| %>
+      <div class="status">
+        <strong><%= status.user.full_name %></strong>
+        <p><%= status.content %></p>
+        <span class="links">
+          <%= link_to 'Show', status %>
+          <%= link_to 'Edit', edit_status_path(status) %>
+          <%= link_to 'Destroy', status, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </span>
+      </div>
+      <hr />
+    <% end %>
+
+<br>
+
+<%= link_to 'New Status', new_status_path %>
